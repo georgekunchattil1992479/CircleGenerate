@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <title>Circle Generator</title>
+    </head>
+       <style>
+            #circle {
+               width: 62px;
+               height: 62px;
+               -webkit-border-radius: 25px;
+               -moz-border-radius: 25px;
+               border-radius: 25px;
+               background: #000080;
+            }
+            h3{
+                color:#fff;
+                font-weight: bold;
+            }
+       </style>
+
+       <script>
+           function circgenerate() {
+            var text = "";
+            var i;
+           var n=document.getElementById("txt").value;
+           for (i = 0; i < n; i++) {
+               text += "<div id='circle'>" + "<h3>&nbsp;&nbsp;" + (i+1)  + "</h3>" + "</div> &nbsp;" ;
+           }
+           document.getElementById("circ").innerHTML = text;
+           }
+       </script>
+
+<body>
+    <div class="container">
+            <h1> Circle Generator</h1>
+            <div class="row">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="txt">
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="circgenerate()">Generate</button>
+                </form>
+             </div><br/>
+             <div class="row">
+                    <p id="circ" class="row"></p> 
+            </div>
+    </div>
+    
+</body>
+
+</html>
